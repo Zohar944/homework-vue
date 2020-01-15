@@ -11,13 +11,6 @@ module.exports = {
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
     proxyTable: {
-      '/newFinanceData': {
-        target: 'http://localhost:8081/finance',  //目标接口域名
-        changeOrigin: true,  //是否跨域
-        pathRewrite: {
-          '^/newFinanceData': '/newFinanceData'   //重写接口
-        }
-      },
       cssSourceMap: false
     },
 

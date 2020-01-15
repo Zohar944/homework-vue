@@ -21,7 +21,18 @@
       </el-form-item>
       <!--      缺个上传图像-->
       <el-form-item>
-        <el-input type="file" v-model="userRegist.newfile"></el-input>
+        <el-upload
+          class="avatar-uploader"
+          action="https://jsonplaceholder.typicode.com/posts/"
+          :show-file-list="false">
+<!--          :on-success="handleAvatarSuccess"-->
+<!--          :before-upload="beforeAvatarUpload"-->
+
+
+          <img class="avatar">
+          <div slot="tip" class="el-upload__tip">选择头像</div>
+          <i class="el-icon-plus avatar-uploader-icon"></i>
+        </el-upload>
       </el-form-item>
       <el-radio-group v-model="userRegist.sex">
         <el-radio label="男"></el-radio>

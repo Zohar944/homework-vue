@@ -37,7 +37,7 @@
     </div>
     <div>
       <UserData></UserData>
-      <FinanceData v-if="finance && finance.financeName" style="width: 50%"></FinanceData>
+      <div v-if="finance && finance.financeName"><FinanceData style="width: 50%"></FinanceData></div>
       <div v-else>亲，要看的话，请您先登录哦</div>
     </div>
   </div>

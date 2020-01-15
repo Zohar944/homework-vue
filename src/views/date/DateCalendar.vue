@@ -1,8 +1,20 @@
 <template>
   <div>
-    <el-calendar v-model="value">
-      <template slot-scope="{date, data}">
-      </template>
+    <el-calendar v-model="value"
+                 :default-data="defaultData"
+    >
+<!--      <template slot="dateCell" slot-scope="{ date, data }">-->
+<!--        <div class="date-cell" :class="data.isSelected ? setData(data.date) :''">-->
+<!--          <div class="calendar-day">-->
+<!--            {{-->
+<!--            data.day-->
+<!--            .split('-')-->
+<!--            .slice(2)-->
+<!--            .join('-')-->
+<!--            }}-->
+<!--          </div>-->
+<!--        </div>-->
+<!--      </template>-->
     </el-calendar>
   </div>
 </template>
@@ -10,14 +22,16 @@
 <script>
   export default {
     name: 'DateCalendar',
-    data () {
+    data() {
       return {
         value: new Date(),
+        defaultData: "",
         yearData: '',
         monthData: '',
-        dateData: ''
+        dateData: '',
       }
     },
+
     props: ['month'],
     watch: {
       'month': function (val) { //监听props中的属性
@@ -25,11 +39,8 @@
       }
     },
     methods: {
-      dateFinance () {
-        this.yearData =this.value.getFullYear()
-        this.monthData=this.value.getMonth()
-        this.dateData=this.value.getDate()
-
+      setData(data){
+        this.defaultData=data
       }
     }
   }

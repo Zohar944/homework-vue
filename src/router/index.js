@@ -7,6 +7,7 @@ import DateCalendar from '../views/date/DateCalendar'
 import P404 from '../views/error_page/P404'
 import UserData from "../views/user_login/data/UserData";
 import FinanceData from "../views/user_login/data/finance/FinanceData";
+import CsvUpload from "../views/user_login/data/function/CsvUpload";
 
 Vue.use(Router)
 
@@ -41,14 +42,19 @@ export default new Router({
       component: P404
     },//这里是保证错误地址会跳转到404界面进行提示
     {
-      path:'views/user_login/data',
+      path:'/views/user_login/data',
       name:'UserData',
       component:UserData
     },
     {
-      path:'views/user_login/data/finance',
+      path:'/views/user_login/data/finance',
       name:'FinanceData',
       component:FinanceData
+    },
+    {
+      path:'/views/user_login/data/function',
+      name:"CsvUpload",
+      component:CsvUpload
     }
   ]
 })
