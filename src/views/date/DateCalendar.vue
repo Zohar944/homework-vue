@@ -3,23 +3,24 @@
     <el-calendar v-model="value"
                  :default-data="defaultData"
     >
-<!--      <template slot="dateCell" slot-scope="{ date, data }">-->
-<!--        <div class="date-cell" :class="data.isSelected ? setData(data.date) :''">-->
-<!--          <div class="calendar-day">-->
-<!--            {{-->
-<!--            data.day-->
-<!--            .split('-')-->
-<!--            .slice(2)-->
-<!--            .join('-')-->
-<!--            }}-->
-<!--          </div>-->
-<!--        </div>-->
-<!--      </template>-->
+      <template slot="dateCell" slot-scope="{ date, data }"  >
+        <div style="width: 100%;height: 100%" class="date-cell" :class="data.isSelected ? setData(data.date) :''" @click="outData(data.day)">
+              {{
+              data.day
+              .split('-')
+              .slice(2)
+              .join('-')
+              }}
+
+        </div>
+      </template>
+
     </el-calendar>
   </div>
 </template>
 
 <script>
+
   export default {
     name: 'DateCalendar',
     data() {
@@ -39,8 +40,12 @@
       }
     },
     methods: {
-      setData(data){
-        this.defaultData=data
+      setData(data) {
+        this.defaultData = data
+      },
+      outData(day) {
+        this.$emit("isStatus",false)
+        sessionStorage.setItem("userDateFinance",day)
       }
     }
   }

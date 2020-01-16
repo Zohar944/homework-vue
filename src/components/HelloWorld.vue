@@ -60,7 +60,7 @@
               if (response.data.data.status == 'SUCCESS') {  //调用后台数据
                 sessionStorage.setItem('userName', response.data.data.userName)
                 sessionStorage.setItem('userId', response.data.data.userId)
-                this.$router.push('/views/finance')
+                this.$router.push('/views/index')
               } else {
                 alert('用户密码错误!')
               }

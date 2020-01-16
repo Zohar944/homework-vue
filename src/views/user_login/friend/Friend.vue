@@ -1,23 +1,19 @@
 <template>
-    <div>
-      <div>
-        fsagd
-      </div>
-    </div>
+    <div>sadsad</div>
 </template>
 
 <script>
     export default {
-        name: "UserInfo",
+        name: "Firend",
       data(){
-          return{
+          return {
 
           }
       },
-      methods:{
-      }
+
     }
 </script>
 
 <style scoped>
+
 </style>

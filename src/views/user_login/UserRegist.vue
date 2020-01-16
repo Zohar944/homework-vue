@@ -111,7 +111,7 @@
                 this.$router.push('/')
               })
             } else {
-              this.$route.push('views/user_login')
+              this.$route.push('/views/user_login')
             }
           })
           this.$router.push('/')

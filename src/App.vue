@@ -1,25 +1,25 @@
 <template>
-  <div id="app">
-    <div style="float: top"><img src="./assets/logo.png"></div>
-    <router-view v-if="isRouterAlive"></router-view>
-  </div>
+    <div id="app">
+      <div style="float: top"><img src="./assets/logo.png"></div>
+      <router-view v-if="isRouterAlive"></router-view>
+    </div>
 </template>
 
 <script>
   export default {
     name: 'App',
-    provide () {
+    provide() {
       return {
         reload: this.reload
       }
     },
-    data () {
+    data() {
       return {
         isRouterAlive: true,
       }
     },
     methods: {
-      reload () {
+      reload() {
         this.isRouterAlive = false
         this.$nextTick(function () {
           this.isRouterAlive = true
