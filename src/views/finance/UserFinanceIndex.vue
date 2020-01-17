@@ -1,7 +1,7 @@
 <!--记账首页-->
 <template>
   <div>
-    <div v-if="this.isStatus">
+    <div v-if="this.isStatus === false">
       <div class="flaot-class">
         <el-form>
           <el-row>
@@ -62,7 +62,7 @@
     inject: ['reload'],
     data() {
       return {
-        isStatus: true,
+        isStatus: false,
         monthValue: {
           table: new Date()
         },
@@ -83,7 +83,6 @@
     watch: {
       'isstatus': function (val) { //监听props中的属性
         this.isStatus = val
-        console.log(this.isStatus)
       }
     },
     mounted() {
@@ -93,7 +92,8 @@
     },
     methods: {
       funStatus(value) {
-        if (this.isStatus) {
+        if (value === false) {
+          console.log(value)
           this.$emit("status", true)
         }
         this.isStatus = value

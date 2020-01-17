@@ -12,6 +12,7 @@ import UserInfo from "../views/user_login/user/UserInfo";
 import DateFinance from "../views/finance/date_finance/DateFinance";
 import Friend from "../views/user_login/friend/Friend";
 import Index from "../views/index/Index";
+import Balance from "../views/user_login/data/finance/balance/Balance";
 
 Vue.use(Router)
 
@@ -92,6 +93,10 @@ export default new Router({
       meta: {
         requireAuth: true,  // 添加该字段，表示进入这个路由是需要登录的
       }
+    },{
+    path:'/views/user_login/data/finance/balance',
+      name:'Balance',
+      component:Balance
     }
   ]
 })

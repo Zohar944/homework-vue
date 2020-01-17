@@ -60,6 +60,8 @@
               if (response.data.data.status == 'SUCCESS') {  //调用后台数据
                 sessionStorage.setItem('userName', response.data.data.userName)
                 sessionStorage.setItem('userId', response.data.data.userId)
+                sessionStorage.setItem('password',password)//缺密文显示，密码换算算法。
+                sessionStorage.setItem('telNumber',response.data.data.telNumber)
                 this.$router.push('/views/index')
               } else {
                 alert('用户密码错误!')
