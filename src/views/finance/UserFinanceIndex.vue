@@ -38,7 +38,7 @@
         </el-form>
       </div>
       <div>
-        <UserData></UserData>
+        <UserData style="width: 100%"></UserData>
         <div v-if="finance && finance.financeName">
           <FinanceData style="width: 50%"></FinanceData>
         </div>
@@ -93,7 +93,7 @@
     methods: {
       funStatus(value) {
         if (value === false) {
-          console.log(value)
+          // console.log(value)
           this.$emit("status", true)
         }
         this.isStatus = value

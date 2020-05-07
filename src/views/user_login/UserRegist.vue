@@ -107,8 +107,14 @@
                   gender: sex
                 }
               }).then((response) => {//这里使用了ES6的语法
-                alert('您的账号ID为:'+response.data.data) //调用后台传过来的数据
-                this.$router.push('/')
+                // if(response.data.data != 'null'){
+                  alert('您的账号ID为:'+response.data.data) //调用后台传过来的数据
+                // console.log(response.data.data)
+                  this.$router.push('/')
+              // }
+                // else {
+                //   alert('手机号已经注册，如忘记密码，请点击修改密码！')
+                // }
               })
             } else {
               this.$route.push('/views/user_login')
