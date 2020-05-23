@@ -17,6 +17,7 @@ import Balance from "../views/user_login/data/finance/balance/Balance";
 Vue.use(Router)
 
 export default new Router({
+  base:'/homework/',
   routes: [
     {
       path: '/',

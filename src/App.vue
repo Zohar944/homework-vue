@@ -1,6 +1,7 @@
 <template>
     <div id="app">
-      <div style="float: top"><img src="./assets/logo.png"></div>
+      <div style="float: top"><img src="./assets/logo.png">
+      </div>
       <router-view v-if="isRouterAlive"></router-view>
     </div>
 </template>

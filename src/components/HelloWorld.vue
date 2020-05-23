@@ -51,7 +51,7 @@
           if (valid) {
             this.$axios({
               method: 'post',
-              url: 'http://localhost:8081/userservice/userLogin',
+              url: 'http://101.200.219.156:80/api/userservice/userLogin',
               data: this.qs.stringify({    //这里是发送给后台的数据
                 userId: userId,
                 password: password,

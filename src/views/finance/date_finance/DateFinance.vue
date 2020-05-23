@@ -47,7 +47,7 @@
       userDateFinanceQuery() {
         this.$axios({
           method: 'post',
-          url: 'http://localhost:8081/finance/financeDataQuery',
+          url: 'http://101.200.219.156:80/api/finance/financeDataQuery',
           data: this.qs.stringify({    //这里是发送给后台的数据
             userId: sessionStorage.getItem("userId"),
             dateId: sessionStorage.getItem("userDateFinance")

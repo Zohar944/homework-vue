@@ -155,7 +155,7 @@
             if (valid) {
               this.$axios({
                 method: 'post',
-                url: 'http://localhost:8081/userservice/userEdit',
+                url: 'http://localhost:80/api/userservice/userEdit',
                 data: this.qs.stringify({    //这里是发送给后台的数据
                   userId: sessionStorage.getItem('userId'),
                   userName: status
@@ -180,7 +180,7 @@
             if (valid) {
               this.$axios({
                 method: 'post',
-                url: 'http://localhost:8081/userservice/userEdit',
+                url: 'http://localhost:80/api/userservice/userEdit',
                 data: this.qs.stringify({    //这里是发送给后台的数据
                   userId: sessionStorage.getItem('userId'),
                   password: status
@@ -204,7 +204,7 @@
             if (valid) {
               this.$axios({
                 method: 'post',
-                url: 'http://localhost:8081/userservice/userEdit',
+                url: 'http://101.200.219.156:80/api/userservice/userEdit',
                 data: this.qs.stringify({    //这里是发送给后台的数据
                   userId: sessionStorage.getItem('userId'),
                   telNumber: status
