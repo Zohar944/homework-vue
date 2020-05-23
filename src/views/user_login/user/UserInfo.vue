@@ -204,7 +204,7 @@
             if (valid) {
               this.$axios({
                 method: 'post',
-                url: 'http://101.200.219.156:80/api/userservice/userEdit',
+                url: '/api/userservice/userEdit',
                 data: this.qs.stringify({    //这里是发送给后台的数据
                   userId: sessionStorage.getItem('userId'),
                   telNumber: status

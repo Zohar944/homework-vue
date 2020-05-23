@@ -98,7 +98,7 @@
             if (valid) {
               this.$axios({
                 method: 'post',
-                url: 'http://101.200.219.156:80/api/userservice/userRegister',
+                url: '/api/userservice/userRegister',
                 data: {
                   telNumber: telNumber,
                   userName: uname,

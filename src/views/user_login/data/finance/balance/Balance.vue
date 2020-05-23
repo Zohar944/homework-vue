@@ -27,7 +27,7 @@
       funBalance() {
         this.$axios({
           method: 'post',
-          url: 'http://localhost:80/api/finance/financeDataQuery',
+          url: '/api/finance/financeDataQuery',
           data: this.qs.stringify({    //这里是发送给后台的数据
             userId: sessionStorage.getItem('userId'),
             dateId: this.today.getFullYear()+"-"+this.today.getMonth()+1+"-"+this.today.getDate()

@@ -14,6 +14,14 @@ Vue.prototype.qs = qs
 Vue.use(ElementUI)
 Vue.config.productionTip = false
 
+if (location.href.indexOf('http://localhost:80') !== -1) { // 本地时
+  axios.defaults.baseURL = '/api'
+} else if (location.href.indexOf('https') !== -1) {  // https协议时
+  axios.defaults.baseURL = 'https://101.200.219.156'
+} else { // http协议时
+  axios.defaults.baseURL = 'http://101.200.219.156'
+}
+
 new Vue({
   el: '#app',
   router,

@@ -2,7 +2,7 @@
     <el-upload
       class="upload-demo"
       ref="upload"
-      action="http://101.200.219.156:80/api/finance/billImport"
+      action="/api/finance/billImport"
       :data="financeInfo"
       :on-success="submitSuccess"
       :on-error="submitError"
